@@ -35,7 +35,7 @@
           extend: {
             colors: {
               clifford: "#da373d",
-              commonColor: "#da373d",
+              'heading-text-color': "#131318",
             },
           },
         },
@@ -50,6 +50,41 @@
     </style>
   </head>
   <body class="font-Manrope box-border">
-    
+    <!-- header section -->
+    <header class="container mx-auto px-8 lg:px-24">
+        <!-- navbar section -->
+      <div class="navbar bg-base-100 mb-12 mt-12">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </div>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-lg">
+        <li><a class="text-red-500">Home</a></li>
+        <li><a class="hover:text-red-500 duration-300">About</a></li>
+        <li><a class="hover:text-red-500 duration-300">Pages</a></li>
+        <li><a class="hover:text-red-500 duration-300">Blog</a></li>
+        <li><a class="hover:text-red-500 duration-300">Contact</a></li>
+      </ul>
+    </div>
+    <a class="btn btn-ghost font-extrabold text-xl text-heading-text-color md:text-2xl lg:text-4xl">Hockey<span class="duration-300 text-red-500 -mr-1">’</span>s</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1 text-lg">
+        <li><a class="text-red-500">Home</a></li>
+        <li><a class="hover:text-red-500 duration-300">About</a></li>
+        <li><a class="hover:text-red-500 duration-300">Pages</a></li>
+        <li><a class="hover:text-red-500 duration-300">Blog</a></li>
+        <li><a class="hover:text-red-500 duration-300">Contact</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <div class="space-x-3 flex items-center justify-center">
+        <i class="fa-solid fa-magnifying-glass hidden lg:flex"></i>
+         <a role="button" class="btn bg-red-500 opacity-90 duration-300 rounded-lg text-white hover:bg-red-500 text-lg lg:text-xl hover:opacity-100">Get Ticket</a>
+    </div>
+  </div>
+</div>
+    </header>
   </body>
 </html>
