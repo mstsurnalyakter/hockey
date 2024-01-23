@@ -817,14 +817,14 @@
           class="hero border-2 border-[rgba(19, 19, 24, 0.10)] rounded-2xl p-8"
         >
           <div class="hero-content flex-col lg:flex-row gap-10">
-            <img src="./images/faq.png" class="flex-1 w-full" />
+            <img src="./images/faq.png" class="w-full lg:w-1/3 xl:w-1/2" />
 
-
-            <div class="flex-1 w-full lg:w-[650px]">
-
-              <div class="collapse lg:w-[650px] collapse-plus border-b-2 border-[rgba(19, 19, 24, 0.10)] min-h-20 w-full">
+            <div class="w-full lg:w-2/3 xl:w-1/2">
+              <div
+                class="collapse collapse-plus duration-300 border-b-2 border-[rgba(19, 19, 24, 0.10)] min-h-20"
+              >
                 <input type="radio" name="my-accordion-3" checked="checked" />
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title font-extrabold text-lg lg:text-xl">
                   Click to open this one and close others
                 </div>
                 <div class="collapse-content">
@@ -832,9 +832,11 @@
                 </div>
               </div>
 
-              <div class="collapse collapse-plus border-b-2 border-[rgba(19, 19, 24, 0.10)] min-h-20 w-full">
+              <div
+                class="collapse collapse-plus border-b-2 duration-300 border-[rgba(19, 19, 24, 0.10)] min-h-20 w-full"
+              >
                 <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title font-extrabold text-lg lg:text-xl">
                   Click to open this one and close others
                 </div>
                 <div class="collapse-content">
@@ -842,9 +844,11 @@
                 </div>
               </div>
 
-              <div class="collapse collapse-plus border-b-2 border-[rgba(19, 19, 24, 0.10)] min-h-20 w-full">
+              <div
+                class="collapse collapse-plus border-b-2 duration-300 border-[rgba(19, 19, 24, 0.10)] min-h-20 w-full"
+              >
                 <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title font-extrabold text-lg lg:text-xl">
                   Click to open this one and close others
                 </div>
                 <div class="collapse-content">
@@ -852,19 +856,18 @@
                 </div>
               </div>
 
-              <div class="collapse collapse-plus border-b-2 border-[rgba(19, 19, 24, 0.10)] min-h-20 w-full">
+              <div
+                class="collapse collapse-plus border-b-2 duration-300 border-[rgba(19, 19, 24, 0.10)] min-h-20 w-full"
+              >
                 <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-xl font-medium">
+                <div class="collapse-title font-extrabold text-lg lg:text-xl">
                   Click to open this one and close others
                 </div>
                 <div class="collapse-content">
                   <p>hello</p>
                 </div>
               </div>
-
             </div>
-
-
           </div>
         </div>
       </section>
@@ -873,7 +876,151 @@
       <section
         class="border-2 border-[rgba(19, 19, 24, 0.20)] border-dashed mt-24 mb-12"
       ></section>
-      
+
+      <!-- Get In Touch section -->
+      <section>
+        <section class="mb-12">
+          <section
+            class="text-common-color w-full md:w-1/2 mx-auto text-center space-y-6 py-8"
+          >
+            <h2 class="font-extrabold text-2xl lg:text-4xl">Get In Touch</h2>
+            <p class="opacity-60 text-lg">
+              Embark on a journey through our hockey club's tailored programs,
+              catering to every stage of development. From the foundational
+              Junior Program to the transitional Teenager Program and the
+              advanced Junior Program, each initiative is crafted to nurture
+              skills, foster camaraderie, and shape the future of our players.
+            </p>
+          </section>
+        </section>
+
+        <section
+          class="border-2 border-[rgba(19, 19, 24, 0.20)] border-dashed mt-8 mb-12"
+        ></section>
+
+        <!-- contact section -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- contact address -->
+          <section
+            class="py-12 px-6 border-2 border-[rgba(19, 19, 24, 0.20)] rounded-2xl space-y-6"
+          >
+            <!-- card1 -->
+            <section
+              class="bg-[#F8FDF0] rounded-2xl p-8 space-y-6"
+            >
+              <img src="./images/phone.png" alt="phone" />
+              <p class="opacity-60">Phone Number :</p>
+              <h2 class="text-common-color font-extrabold">
+                (+62) 123-321-543
+              </h2>
+            </section>
+
+            <!-- card2 -->
+            <section
+              class="bg-[#FFFCEF] rounded-2xl p-8 space-y-6"
+            >
+              <img src="./images/email.png" alt="email" />
+              <p class="opacity-60">Email :</p>
+              <h2 class="text-common-color text-wrap font-bold  lg:font-extrabold">
+                hockeys@gmail.com
+              </h2>
+            </section>
+
+            <!-- card3 -->
+            <section
+              class="bg-[#EFF5FE] rounded-2xl p-8 space-y-6"
+            >
+              <img src="./images/location.png" alt="phone" />
+              <p class="opacity-60">Location :</p>
+              <h2 class="text-common-color font-extrabold">
+                152/1 Mohakhali Wireless Gate
+              </h2>
+            </section>
+          </section>
+
+          <!-- contact from -->
+          <section class="lg:col-span-2">
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div class="flex flex-col gap-4">
+                <label
+                  class="text-common-color text-xl font-bold"
+                  for="fullName"
+                  >Your Name</label
+                >
+                <input
+                  class="bg-base-200 p-5 rounded-xl border-none outline-none"
+                  type="text"
+                  name="fullName"
+                  id="fullName"
+                  placeholder="Enter your full name"
+                />
+              </div>
+              <div class="flex flex-col gap-4">
+                <label class="text-common-color text-xl font-bold" for="email"
+                  >Your Email</label
+                >
+                <input
+                  class="bg-base-200 p-5 rounded-xl border-none outline-none"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="flex flex-col gap-4">
+                <label class="text-common-color text-xl font-bold" for="subject"
+                  >Subject</label
+                >
+                <input
+                  class="bg-base-200 p-5 rounded-xl border-none outline-none"
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  placeholder="Enter your subject"
+                />
+              </div>
+              <div class="flex flex-col gap-4">
+                <label class="text-common-color text-xl font-bold" for="phone"
+                  >Phone Number</label
+                >
+                <input
+                  class="bg-base-200 p-5 rounded-xl border-none outline-none"
+                  type="number"
+                  name="phone"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+              <div class="lg:col-span-2 flex flex-col gap-4">
+                <label
+                class="text-common-color text-xl font-bold"
+                  for="message"
+                  >Message</label
+                >
+                <textarea
+                class="bg-base-200 p-5 rounded-xl border-none outline-none"
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="15"
+                ></textarea>
+              </div>
+              <div class="lg:col-span-2 flex flex-col gap-4">
+                <input
+                  class="bg-base-200 p-5 rounded-xl border-none outline-none text-center bg-red-500 text-white font-bold w-full cursor-pointer"
+                  type="submit"
+                  value="Send Message"
+                />
+              </div>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <!-- horizontal line -->
+      <section
+        class="border-2 border-[rgba(19, 19, 24, 0.20)] border-dashed mt-24 mb-12"
+      ></section>
     </main>
   </body>
 </html>
