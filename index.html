@@ -35,7 +35,7 @@
           extend: {
             colors: {
               clifford: "#da373d",
-              'heading-text-color': "#131318",
+              "common-color": "#131318",
             },
           },
         },
@@ -45,46 +45,143 @@
     <!-- Custom CSS -->
     <style>
       .font-Manrope {
-        font-family: 'Manrope', sans-serif;
+        font-family: "Manrope", sans-serif;
       }
     </style>
   </head>
   <body class="font-Manrope box-border">
     <!-- header section -->
-    <header class="container mx-auto px-8 lg:px-24">
-        <!-- navbar section -->
-      <div class="navbar bg-base-100 mb-12 mt-12">
-  <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-      </div>
-      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-lg">
-        <li><a class="text-red-500">Home</a></li>
-        <li><a class="hover:text-red-500 duration-300">About</a></li>
-        <li><a class="hover:text-red-500 duration-300">Pages</a></li>
-        <li><a class="hover:text-red-500 duration-300">Blog</a></li>
-        <li><a class="hover:text-red-500 duration-300">Contact</a></li>
-      </ul>
-    </div>
-    <a class="btn btn-ghost font-extrabold text-xl text-heading-text-color md:text-2xl lg:text-4xl">Hockey<span class="duration-300 text-red-500 -mr-1">’</span>s</a>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1 text-lg">
-        <li><a class="text-red-500">Home</a></li>
-        <li><a class="hover:text-red-500 duration-300">About</a></li>
-        <li><a class="hover:text-red-500 duration-300">Pages</a></li>
-        <li><a class="hover:text-red-500 duration-300">Blog</a></li>
-        <li><a class="hover:text-red-500 duration-300">Contact</a></li>
-    </ul>
-  </div>
-  <div class="navbar-end">
-    <div class="space-x-3 flex items-center justify-center">
-        <i class="fa-solid fa-magnifying-glass hidden lg:flex"></i>
-         <a role="button" class="btn bg-red-500 opacity-90 duration-300 rounded-lg text-white hover:bg-red-500 text-lg lg:text-xl hover:opacity-100">Get Ticket</a>
-    </div>
-  </div>
-</div>
+    <header class="container mx-auto px-8 lg:px-24 relative">
+      <!-- navbar section -->
+      <nav>
+        <div class="navbar bg-base-100 mb-12 mt-12">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-lg"
+              >
+                <li><a class="text-red-500">Home</a></li>
+                <li><a class="hover:text-red-500 duration-300">About</a></li>
+                <li><a class="hover:text-red-500 duration-300">Pages</a></li>
+                <li><a class="hover:text-red-500 duration-300">Blog</a></li>
+                <li><a class="hover:text-red-500 duration-300">Contact</a></li>
+              </ul>
+            </div>
+            <a
+              class="btn btn-ghost font-extrabold text-xl text-common-color md:text-2xl lg:text-4xl"
+              >Hockey<span class="duration-300 text-red-500 -mr-1">’</span>s</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-lg">
+              <li><a class="text-red-500">Home</a></li>
+              <li><a class="hover:text-red-500 duration-300">About</a></li>
+              <li><a class="hover:text-red-500 duration-300">Pages</a></li>
+              <li><a class="hover:text-red-500 duration-300">Blog</a></li>
+              <li><a class="hover:text-red-500 duration-300">Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <div class="space-x-5 flex items-center justify-center">
+              <i class="fa-solid fa-magnifying-glass hidden lg:flex"></i>
+              <a
+                role="button"
+                class="btn bg-red-500 opacity-90 duration-300 rounded-lg text-white hover:bg-red-500 text-lg lg:text-xl hover:opacity-100"
+                >Get Ticket</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- hero section -->
+      <section>
+        <div class="carousel w-full md:h-[600px]">
+
+          <!-- slide 1 -->
+          <div id="slide1" class="carousel-item relative w-full">
+
+            <img src="./images/banner1.png" class="w-full" />
+
+            <div
+              class="absolute space-x-4 right-1/2 top-1/2 translate-x-12 md:translate-x-0 md:justify-between md:space-x-0 lg:items-end lg:justify-start flex transform -translate-y-1/2 md:left-5 lg:-translate-y-1/2 md:right-5 lg:-bottom-32 lg:space-x-3"
+            >
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+
+          <!-- slide 2 -->
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="./images/banner2.png" class="w-full" />
+            <div
+              class="absolute space-x-4 right-1/2 top-1/2 translate-x-12 md:translate-x-0 md:justify-between md:space-x-0 lg:items-end lg:justify-start flex transform -translate-y-1/2 md:left-5 lg:-translate-y-1/2 md:right-5 lg:-bottom-32 lg:space-x-3"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+
+          <!-- slide 3 -->
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="./images/banner3.png" class="w-full" />
+
+            <div
+              class="absolute space-x-4 right-1/2 top-1/2 translate-x-12 md:translate-x-0 md:justify-between md:space-x-0 lg:items-end lg:justify-start flex transform -translate-y-1/2 md:left-5 lg:-translate-y-1/2 md:right-5 lg:-bottom-32 lg:space-x-3"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+
+          <!-- slide 4 -->
+
+          <div id="slide4" class="carousel-item relative w-full">
+            <img src="./images/banner4.png" class="w-full" />
+
+            <div
+              class="absolute space-x-4 right-1/2 top-1/2 translate-x-12 md:translate-x-0 md:justify-between md:space-x-0 lg:items-end lg:justify-start flex transform -translate-y-1/2 md:left-5 lg:-translate-y-1/2 md:right-5 lg:-bottom-32 lg:space-x-3"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badge section -->
+        <section class="relative mt-5 md:mt-0">
+          <section
+            class="bg-common-color p-10 w-full md:w-[566px] text-white space-y-4 rounded-2xl absolute md:right-8 md:bottom-8"
+          >
+            <h2 class="font-extrabold text-lg lg:text-2xl">
+              Meet all the heroes from the field
+            </h2>
+            <p class="opacity-60">
+              Discover inspiring tales of field heroes, showcasing dedication
+              and triumphs that extend beyond boundaries. Meet the extraordinary
+              individuals defining excellence.
+            </p>
+          </section>
+        </section>
+
+      </section>
     </header>
   </body>
 </html>
