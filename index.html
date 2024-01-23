@@ -48,6 +48,12 @@
         font-family: "Manrope", sans-serif;
       }
     </style>
+
+    <!-- component -->
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js"
+      defer
+    ></script>
   </head>
   <body class="font-Manrope box-border">
     <!-- header section -->
@@ -204,59 +210,305 @@
 
         <!-- progress container -->
         <section class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4">
-
           <!-- first progress bar -->
           <div class="card py-3">
-            <figure>
-             <div class="radial-progress text-red-500" style="--value:87; --size:9rem; --thickness: 1rem;" role="progressbar"><span class="text-common-color font-extrabold text-3xl">87%</span></div>
+            <figure class="py-4">
+              <div
+                class="flex items-center flex-wrap px-10 rounded-2xl w-40"
+                x-data="{ circumference: 50 * 2 * Math.PI, percent: 87 }"
+              >
+                <div
+                  class="flex items-center justify-center -m-6 overflow-hidden bg-white rounded-full"
+                >
+                  <svg
+                    class="w-32 h-32 transform translate-x-1 translate-y-1 rotate-[10deg]"
+                    x-cloak
+                    aria-hidden="true"
+                  >
+                    <circle
+                      class="text-gray-300"
+                      stroke-width="10"
+                      stroke="currentColor"
+                      fill="transparent"
+                      r="50"
+                      cx="60"
+                      cy="60"
+                    />
+                    <circle
+                      class="text-red-500"
+                      stroke-width="10"
+                      :stroke-dasharray="circumference"
+                      :stroke-dashoffset="circumference - percent / 100 * circumference"
+                      stroke-linecap="round"
+                      stroke="currentColor"
+                      fill="transparent"
+                      r="50"
+                      cx="60"
+                      cy="60"
+                    />
+                  </svg>
+                  <span
+                    class="absolute text-2xl text-common-color"
+                    x-text="`${percent}%`"
+                  ></span>
+                </div>
+              </div>
             </figure>
             <div class="card-body text-center space-y-3">
               <h2 class="text-2xl font-semibold">Prayer Facility</h2>
-              <p class="opacity-60 text-sm">We offer a specialized player facility for the well-being and mental peace enhancement of players.</p>
+              <p class="opacity-60 text-sm">
+                We offer a specialized player facility for the well-being and
+                mental peace enhancement of players.
+              </p>
             </div>
           </div>
 
           <!-- second progress bar -->
           <div class="card py-3">
-            <figure>
-             <div class="radial-progress text-[#49d293]" style="--value:95; --size:9rem; --thickness: 1rem;" role="progressbar"><span class="text-common-color font-extrabold text-3xl">95%</span></div>
+            <figure class="py-4">
+              <div
+                class="flex items-center flex-wrap px-10 rounded-2xl w-40"
+                x-data="{ circumference: 50 * 2 * Math.PI, percent:95 }"
+              >
+                <div
+                  class="flex items-center justify-center -m-6 overflow-hidden bg-white rounded-full"
+                >
+                  <svg
+                    class="w-32 h-32 transform translate-x-1 translate-y-1 rotate-[10deg]"
+                    x-cloak
+                    aria-hidden="true"
+                  >
+                    <circle
+                      class="text-gray-300"
+                      stroke-width="10"
+                      stroke="currentColor"
+                      fill="transparent"
+                      r="50"
+                      cx="60"
+                      cy="60"
+                    />
+                    <circle
+                      class="text-[#49d293]"
+                      stroke-width="10"
+                      :stroke-dasharray="circumference"
+                      :stroke-dashoffset="circumference - percent / 100 * circumference"
+                      stroke-linecap="round"
+                      stroke="currentColor"
+                      fill="transparent"
+                      r="50"
+                      cx="60"
+                      cy="60"
+                    />
+                  </svg>
+                  <span
+                    class="absolute text-2xl text-common-color"
+                    x-text="`${percent}%`"
+                  ></span>
+                </div>
+              </div>
             </figure>
             <div class="card-body text-center space-y-3">
               <h2 class="text-2xl font-semibold">Experienced Coach</h2>
-              <p class="opacity-60 text-sm">Our club provides a dedicated Experienced Coach Facility. Elevate your athletic journey with expert guidance tailored for individual player growth and excellence.</p>
+              <p class="opacity-60 text-sm">
+                Our club provides a dedicated Experienced Coach Facility.
+                Elevate your athletic journey with expert guidance tailored for
+                individual player growth and excellence.
+              </p>
             </div>
           </div>
 
           <!-- third progress bar -->
           <div class="card py-3">
-            <figure>
-             <div class="radial-progress text-[#ffb546]" style="--value:80; --size:9rem; --thickness: 1rem;" role="progressbar"><span class="text-common-color font-extrabold text-3xl">80%</span></div>
+            <figure class="py-4">
+              <div
+                class="flex items-center flex-wrap px-10 rounded-2xl w-40"
+                x-data="{ circumference: 50 * 2 * Math.PI, percent: 80 }"
+              >
+                <div
+                  class="flex items-center justify-center -m-6 overflow-hidden bg-white rounded-full"
+                >
+                  <svg
+                    class="w-32 h-32 transform translate-x-1 translate-y-1 rotate-[10deg]"
+                    x-cloak
+                    aria-hidden="true"
+                  >
+                    <circle
+                      class="text-gray-300"
+                      stroke-width="10"
+                      stroke="currentColor"
+                      fill="transparent"
+                      r="50"
+                      cx="60"
+                      cy="60"
+                    />
+                    <circle
+                      class="text-[#ffb546]"
+                      stroke-width="10"
+                      :stroke-dasharray="circumference"
+                      :stroke-dashoffset="circumference - percent / 100 * circumference"
+                      stroke-linecap="round"
+                      stroke="currentColor"
+                      fill="transparent"
+                      r="50"
+                      cx="60"
+                      cy="60"
+                    />
+                  </svg>
+                  <span
+                    class="absolute text-2xl text-common-color"
+                    x-text="`${percent}%`"
+                  ></span>
+                </div>
+              </div>
             </figure>
             <div class="card-body text-center space-y-3">
               <h2 class="text-2xl font-semibold">Senior Player</h2>
-              <p class="opacity-60 text-sm">Our senior player's dedication and skill have not only shaped the team but also left an indelible mark in the realm of sports excellence.</p>
+              <p class="opacity-60 text-sm">
+                Our senior player's dedication and skill have not only shaped
+                the team but also left an indelible mark in the realm of sports
+                excellence.
+              </p>
             </div>
           </div>
 
           <!-- fourth progress bar -->
           <div class="card py-3">
-            <figure>
-             <div class="radial-progress text-[#5e7fd8]" style="--value:90; --size:9rem; --thickness: 1rem;" role="progressbar"><span class="text-common-color font-extrabold text-3xl">90%</span></div>
+            <figure class="py-4">
+              <div
+                class="flex items-center flex-wrap px-10 rounded-2xl w-40"
+                x-data="{ circumference: 50 * 2 * Math.PI, percent: 87 }"
+              >
+                <div
+                  class="flex items-center justify-center -m-6 overflow-hidden bg-white rounded-full"
+                >
+                  <svg
+                    class="w-32 h-32 transform translate-x-1 translate-y-1 rotate-[10deg]"
+                    x-cloak
+                    aria-hidden="true"
+                  >
+                    <circle
+                      class="text-gray-300"
+                      stroke-width="10"
+                      stroke="currentColor"
+                      fill="transparent"
+                      r="50"
+                      cx="60"
+                      cy="60"
+                    />
+                    <circle
+                      class="text-[#5e7fd8]"
+                      stroke-width="10"
+                      :stroke-dasharray="circumference"
+                      :stroke-dashoffset="circumference - percent / 100 * circumference"
+                      stroke-linecap="round"
+                      stroke="currentColor"
+                      fill="transparent"
+                      r="50"
+                      cx="60"
+                      cy="60"
+                    />
+                  </svg>
+                  <span
+                    class="absolute text-2xl text-common-color"
+                    x-text="`${percent}%`"
+                  ></span>
+                </div>
+              </div>
             </figure>
             <div class="card-body text-center space-y-3">
               <h2 class="text-2xl font-semibold">Training Ground</h2>
               <p class="opacity-60 text-sm">
-                Our state-of-the-art Training Ground is the epicenter of athletic excellence. Here, every drill refines skills, every session builds resilience, and every moment paves the way for champions.
+                Our state-of-the-art Training Ground is the epicenter of
+                athletic excellence. Here, every drill refines skills, every
+                session builds resilience, and every moment paves the way for
+                champions.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="border-2 border-[rgba(19, 19, 24, 0.20)] border-dashed mt-8 mb-8"
+        ></section>
+      </section>
+
+      <!-- Program Sections -->
+      <section>
+        <section class="mb-12">
+          <section
+            class="text-common-color w-full md:w-1/2 mx-auto text-center space-y-6 py-8"
+          >
+            <h2 class="font-extrabold text-2xl lg:text-4xl">
+              Program Sections
+            </h2>
+            <p class="opacity-60 text-lg">
+              Embark on a journey through our hockey club's tailored programs,
+              catering to every stage of development. From the foundational
+              Junior Program to the transitional Teenager Program and the
+              advanced Junior Program, each initiative is crafted to nurture
+              skills, foster camaraderie, and shape the future of our players.
+            </p>
+          </section>
+        </section>
+
+        <section
+          class="border-2 border-[rgba(19, 19, 24, 0.20)] border-dashed mt-8 mb-12"
+        ></section>
+        <!-- program container -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+          <!-- first program -->
+          <div
+            class="h-[338px] rounded-2xl w-full bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./images/banner2.png)] bg-center bg-cover">
+            <div class="text-white mt-20 ml-4">
+              <div class="w-3/4">
+                <h2 class="mb-5 text-3xl font-extrabold">Junior Program</h2>
+                <p class="mb-5">
+                  Tailored for young enthusiasts, the Junior Program offers a comprehensive introduction to hockey fundamentals, skill development, and teamwork.
+                </p>
+                <button class="btn bg-red-500 text-white hover:bg-red-600 rounded-lg border-none outline-none text-lg lg:text-xl duration-300font-bold">Register Now!</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- second program -->
+          <div
+            class="h-[338px] rounded-2xl w-full bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./images/banner3.png)] bg-center bg-cover">
+            <div class="text-white mt-20 ml-4">
+              <div class="w-3/4">
+                <h2 class="mb-5 text-3xl font-extrabold">Teenager Program</h2>
+                <p class="mb-5">
+                  Through the Teenager Program, the aspiring players delve into advanced hockey training.
+                </p>
+                <button class="btn bg-red-500 text-white hover:bg-red-600 rounded-lg border-none outline-none text-lg lg:text-xl duration-300font-bold">Register Now!</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- third program -->
+           <div
+            class="h-[338px] rounded-2xl w-full bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./images/banner3.png)] bg-center bg-cover lg:col-span-2">
+            <div class="text-white mt-20 ml-4">
+              <div class="w-3/4">
+                <h2 class="mb-5 text-3xl font-extrabold">Teenager Program</h2>
+                <p class="mb-5">
+                  Through the Teenager Program, the aspiring players delve into advanced hockey training.
+                </p>
+                <button class="btn bg-red-500 text-white hover:bg-red-600 rounded-lg border-none outline-none text-lg lg:text-xl duration-300font-bold">Register Now!</button>
+              </div>
             </div>
           </div>
 
         </section>
 
-        <section class="border-2 border-[rgba(19, 19, 24, 0.20)] border-dashed mt-8 mb-8"></section>
-
       </section>
-      
+
+      <!-- horizontal line -->
+       <section
+          class="border-2 border-[rgba(19, 19, 24, 0.20)] border-dashed mt-24 mb-12"
+        ></section>
+
+
     </main>
   </body>
 </html>
